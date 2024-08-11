@@ -1,7 +1,11 @@
 // EXPRESS
 const express = require("express")
 const app = express();
-const PORT = 3000;
+
+
+require('dotenv').config();
+const PORT = process.env.PORT;// EXTRACTING PORT FROM .env FILE AS IT CANNOT BE SEND ON PUBLIC REPO.
+
 
 // DATABASE
 const db = require("./db");
