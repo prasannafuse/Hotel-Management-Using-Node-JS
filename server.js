@@ -27,6 +27,7 @@ const menuRoutes = require('./routes/menuRoutes');
 app.use('/person',PersonRoutes);
 app.use('/menu',menuRoutes);
 
+// Server is up
 app.listen(PORT,()=>{
     console.log("Server started on 3000 PORT!!");
 });
