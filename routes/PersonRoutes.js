@@ -33,7 +33,7 @@ router.get("/",async(req,res)=>{
 // Paratermized routes
 router.get("/:workType",async(req,res)=>{
     try{
-        const workType = req.params.workType; // Extract work type form the url.
+        const workType = req.params.workType; // Extract workType form the url.
         if(workType=='chef' || workType=='manager' || workType=='waiter'){
             const response = await Person.find({work: workType});
             console.log("Response fetched.");
@@ -69,5 +69,6 @@ router.put('/:id',async (req,res)=>{
         res.status(500).json({error:"Internal Server Error"});
     }
 
-})
+});
+
 module.exports = router;

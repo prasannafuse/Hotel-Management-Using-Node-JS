@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
-const password = "PrasannaFuse";
-require('dotenv').config();
 
-// const mongoURL = process.env.URL_LOCAL;
-const mongoURL = process.env.URL_ATLAS; // EXTRACTING PORT FROM .env FILE AS IT CANNOT BE SEND ON PUBLIC REPO.(sensative information)
 
+require('dotenv').config(); // .env file requirements.
+const mongoURL = process.env.URL_LOCAL;
+// const mongoURL = process.env.URL_ATLAS; // EXTRACTING PORT FROM .env FILE AS IT CANNOT BE SEND ON PUBLIC REPO.(sensative information)
 
 
 mongoose.connect(mongoURL, {
-    useNewUrlParser: true,
+    // useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
