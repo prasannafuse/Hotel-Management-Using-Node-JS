@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 3000; // Default to 3000 if PORT not set
 // Authentication file
 const passport = require('./auth');
 
+// JWT file
+const jwt = require('./jwt');
+
 // DATABASE
 const db = require("./db");
 
@@ -31,7 +34,7 @@ const PersonRoutes = require("./routes/PersonRoutes");
 const menuRoutes = require('./routes/menuRoutes');
 
 // Use the routes
-app.use('/person',localAuthMiddleware,PersonRoutes);
+app.use('/person',PersonRoutes);
 app.use('/menu',menuRoutes);
 
 // Server is up
